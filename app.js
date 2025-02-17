@@ -12,7 +12,7 @@ const lusca = require('lusca');
 const dotenv = require('dotenv');
 const MongoStore = require('connect-mongo');
 const flash = require('express-flash');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const passport = require('passport');
 const multer = require('multer');
 const rateLimit = require('express-rate-limit');
@@ -65,7 +65,6 @@ const passportConfig = require('./config/passport');
 const app = express();
 console.log('Run this app using "npm start" to include sass/scss/css builds.\n');
 
-
 // Swagger setup
 const swaggerOptions = {
   swaggerDefinition: {
@@ -81,22 +80,20 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ['./app.js'], // files containing annotations as above
+  apis: ['./*.js'], // files containing annotations as above
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-
+app.use('/spec', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 /**
  * Connect to MongoDB.
- */
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on('error', (err) => {
   console.error(err);
   console.log('%s MongoDB connection error. Please make sure MongoDB is running.');
-  process.exit();
-});
+  // process.exit();
+}); */
 
 /**
  * Express configuration.
