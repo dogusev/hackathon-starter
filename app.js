@@ -17,6 +17,9 @@ const passport = require('passport');
 const multer = require('multer');
 const rateLimit = require('express-rate-limit');
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsDoc = require('swagger-jsdoc');
+
 const upload = multer({ dest: path.join(__dirname, 'uploads') });
 
 /**
@@ -61,6 +64,29 @@ const passportConfig = require('./config/passport');
  */
 const app = express();
 console.log('Run this app using "npm start" to include sass/scss/css builds.\n');
+
+
+// Swagger setup
+const swaggerOptions = {
+  swaggerDefinition: {
+    myapi: '3.0.0',
+    info: {
+      title: 'My API',
+      version: '1.0.0',
+      description: 'API documentation',
+    },
+    servers: [
+      {
+        url: 'http://localhost:3000',
+      },
+    ],
+  },
+  apis: ['./routes/*.js'], // files containing annotations as above
+};
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
 
 /**
  * Connect to MongoDB.
