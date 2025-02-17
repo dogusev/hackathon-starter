@@ -18,7 +18,8 @@
     "lint": "eslint \"**/*.js\"",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
     "scss": "sass --no-source-map --load-path=./ --update ./public/css:./public/css",
-    "lintStage": "node_modules/.bin/lint-staged"
+    "lintStage": "node_modules/.bin/lint-staged",
+    "swagger-autogen": "node swagger.js"
   },
   "lint-staged": {
     "*.js": [
@@ -74,6 +75,7 @@
     "pug": "^3.0.2",
     "sass": "^1.69.3",
     "stripe": "^14.1.0",
+    "swagger-autogen": "^2.23.7",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "twilio": "^4.18.1",
