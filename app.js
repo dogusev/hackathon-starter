@@ -51,8 +51,6 @@ if (secureTransfer) numberOfProxies = 1; else numberOfProxies = 0;
  */
 const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
-
-
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 
