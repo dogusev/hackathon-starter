@@ -12,7 +12,7 @@ const lusca = require('lusca');
 const dotenv = require('dotenv');
 const MongoStore = require('connect-mongo');
 const flash = require('express-flash');
-// const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 const passport = require('passport');
 const multer = require('multer');
 const rateLimit = require('express-rate-limit');
@@ -69,12 +69,13 @@ app.use('/spec', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 /**
  * Connect to MongoDB.
+ * */
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on('error', (err) => {
   console.error(err);
   console.log('%s MongoDB connection error. Please make sure MongoDB is running.');
   // process.exit();
-}); */
+});
 
 /**
  * Express configuration.
