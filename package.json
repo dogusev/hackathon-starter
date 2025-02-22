@@ -16,6 +16,7 @@
     "start": "npm run scss && node app.js",
     "test": "nyc mocha --timeout=60000 --exit",
     "lint": "eslint \"**/*.js\"",
+    "test:jest": "jest test",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
     "scss": "sass --no-source-map --load-path=./ --update ./public/css:./public/css",
     "lintStage": "node_modules/.bin/lint-staged",
@@ -29,6 +30,7 @@
   "pre-commit": "lint-staged",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
+    "jest": "^26.6.3",
     "@googleapis/drive": "^8.4.0",
     "@googleapis/sheets": "^5.0.5",
     "@ladjs/bootstrap-social": "^7.0.2",
