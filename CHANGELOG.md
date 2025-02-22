@@ -1,4 +1,8 @@
-## 8.0.2 (2025-02-22)
+## [8.0.3](https://github.com/sahat/hackathon-starter/compare/8.0.2...8.0.3) (2025-02-22)
+
+
+
+## [8.0.2](https://github.com/sahat/hackathon-starter/compare/ff6a0c61a8f7169391515ebe2ecf284c75776a6d...8.0.2) (2025-02-22)
 
 
 ### Bug Fixes
