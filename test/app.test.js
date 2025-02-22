@@ -14,11 +14,11 @@ describe('2 + 2 = 4', () => {
     expect(r).toEqual(4);
   });
 
-  it('should be 6', () => {
-    const r = mathAdd(3, 3);
+  it('should be 8', () => {
+    const r = mathAdd(3, 5);
 
     // eslint-disable-next-line no-undef
-    expect(r).toEqual(6);
+    expect(r).toEqual(8);
   });
 
   it('should be 2', () => {
