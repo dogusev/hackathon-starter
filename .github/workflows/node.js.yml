@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,4 +29,11 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: npm run test
-    
+    - name: Bump version and push tag
+      uses: TriPSs/conventional-changelog-action@master
+      with:
+        github-token: ${{ secrets.TOKEN_ACTION }}
+        git-message: 'chore(release): {version}'
+        tag-prefix: ''
+        output-file: 'CHANGELOG.md'
+
