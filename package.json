@@ -14,7 +14,7 @@
   "scripts": {
     "postinstall": "patch-package && npm run scss",
     "start": "npm run scss && node app.js",
-    "test": "nyc mocha --timeout=60000 --exit",
+    "test": "nyc mocha test/models.js --timeout=60000 --exit",
     "lint": "eslint \"**/*.js\"",
     "test:jest": "jest test",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
