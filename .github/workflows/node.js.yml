@@ -30,7 +30,7 @@ jobs:
     - run: npm run lint
     - run: npm run test
     - name: Bump version and push tag
-      uses: TriPSs/conventional-changelog-action@master
+      uses: TriPSs/conventional-changelog-action@v6.0.0
       with:
         github-token: ${{ secrets.TOKEN_ACTION }}
         git-message: 'chore(release): {version}'
