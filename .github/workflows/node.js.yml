@@ -44,5 +44,6 @@ jobs:
         github-token: ${{ secrets.TOKEN_ACTION }}
         git-message: 'chore(release): {version}'
         tag-prefix: ''
+        skip-on-empty: false
         output-file: 'CHANGELOG.md'
 
