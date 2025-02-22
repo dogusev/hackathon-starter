@@ -6,8 +6,6 @@ name: Node.js CI Github Actions
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   build:
@@ -30,7 +28,6 @@ jobs:
     - run: npm run lint
     - run: npm run test
     - name: Bump version and push tag
-      if: github.ref == 'refs/heads/master'
       uses: TriPSs/conventional-changelog-action@v6.0.0
       with:
         github-token: ${{ secrets.TOKEN_ACTION }}
