@@ -14,6 +14,13 @@ describe('2 + 2 = 4', () => {
     expect(r).toEqual(4);
   });
 
+  it('should be 6', () => {
+    const r = mathAdd(3, 3);
+
+    // eslint-disable-next-line no-undef
+    expect(r).toEqual(6);
+  });
+
   it('should be 2', () => {
     const r = mathAdd(0, 2);
 
