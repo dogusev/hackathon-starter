@@ -1,3 +1,7 @@
+## [8.0.6](https://github.com/sahat/hackathon-starter/compare/8.0.5...8.0.6) (2025-02-24)
+
+
+
 ## [8.0.5](https://github.com/sahat/hackathon-starter/compare/8.0.4...8.0.5) (2025-02-24)
 
 
