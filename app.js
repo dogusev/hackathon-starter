@@ -109,7 +109,7 @@ app.use((req, res, next) => {
     // Multer multipart/form-data handling needs to occur before the Lusca CSRF check.
     next();
   } else {
-    //lusca.csrf()(req, res, next);
+    // lusca.csrf()(req, res, next);
     next();
   }
 });
