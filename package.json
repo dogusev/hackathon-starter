@@ -20,6 +20,7 @@
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
     "scss": "sass --no-source-map --load-path=./ --update ./public/css:./public/css",
     "lintStage": "node_modules/.bin/lint-staged",
+    "owasp": "owasp-dependency-check --project \"Tech Hard\" -f HTML",
     "swagger-autogen": "node swagger.js"
   },
   "lint-staged": {
@@ -30,7 +31,6 @@
   "pre-commit": "lint-staged",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
-    "jest": "^26.6.3",
     "@googleapis/drive": "^8.4.0",
     "@googleapis/sheets": "^5.0.5",
     "@ladjs/bootstrap-social": "^7.0.2",
@@ -52,6 +52,7 @@
     "express-flash": "^0.0.2",
     "express-rate-limit": "^7.1.1",
     "express-session": "^1.17.3",
+    "jest": "^26.6.3",
     "jquery": "^3.7.1",
     "lastfm": "^0.9.4",
     "lodash": "^4.17.21",
@@ -95,6 +96,7 @@
     "mocha": "^10.2.0",
     "mongodb-memory-server": "^9.0.1",
     "nyc": "^15.1.0",
+    "owasp-dependency-check": "^0.0.24",
     "sinon": "^16.1.0",
     "supertest": "^6.3.3"
   },
